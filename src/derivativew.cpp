@@ -1,10 +1,9 @@
 #include<iostream>
 float derivativew(float* x, float* y, float w, float b) {
-    int c = 0;
     float total = 0.0f;
     float rtotal = 0.0f;
-
-    while (c != 46) {
+    int len = x,size();
+    for (int i = 0 ; i < len ; i++ {
         float difference = -((y[c]) - (w * x[c] + b)) * x[c];
         c++;
         total = total + difference;

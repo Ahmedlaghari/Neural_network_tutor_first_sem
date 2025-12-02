@@ -1,2 +1,2 @@
 #pragma once
-void linear();
+void linear(int *,int *);

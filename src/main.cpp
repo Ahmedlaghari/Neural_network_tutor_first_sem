@@ -1,16 +1,17 @@
 #include <iostream>
 #include <cmath>
-#include "layer_linear.h"
-#include "layer_tanh.h"
-#include "loss_mse.h"
+#include "../include/layer_linear.h"
+
+#include "../include/layer_tanh.h"
+#include "../include/loss_mse.h"
 
 using namespace std;
 
 int main() {
-    float w1 = 0.5, b1 = 0.1;
-    float w2 = 0.5, b2 = 0.1;
+    float w1 = 0.5f, b1 = 0.1f;
+    float w2 = 0.5f, b2 = 0.1f;
 
-    float lr = 0.01;
+    float lr = 0.01f;
 
     for (int step = 0; step < 5000; step++) {
 
@@ -28,12 +29,12 @@ int main() {
 
         // ---- BACKWARD LAYER 2 (linear) ----
         float dL_dw2, dL_db2, dL_da1;
-        linear_backward(a1, dL_dy_pred, dL_dw2, dL_db2, dL_da1);
+        linear_backward(a1,w2, dL_dy_pred, dL_dw2, dL_db2, dL_da1);
 
         // ---- BACKWARD LAYER 1 (tanh + linear) ----
         float dL_dz1 = tanh_backward(a1, dL_da1);
         float dL_dw1, dL_db1, dL_dx;
-        linear_backward(x, dL_dz1, dL_dw1, dL_db1, dL_dx);
+        linear_backward(x,w1, dL_dz1, dL_dw1, dL_db1, dL_dx);
 
         // ---- UPDATE ----
         w2 -= lr * dL_dw2;

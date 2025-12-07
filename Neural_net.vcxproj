@@ -126,12 +126,18 @@
   <ItemGroup>
     <ClInclude Include="include\derivativeb.h" />
     <ClInclude Include="include\derivativew.h" />
+    <ClInclude Include="include\layer_linear.h" />
+    <ClInclude Include="include\layer_tanh.h" />
     <ClInclude Include="include\linear.h" />
+    <ClInclude Include="include\loss_mse.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\derivativeb.cpp" />
     <ClCompile Include="src\derivativew.cpp" />
+    <ClCompile Include="src\layer_linear.cpp" />
+    <ClCompile Include="src\layer_tanh.cpp" />
     <ClCompile Include="src\linear.cpp" />
+    <ClCompile Include="src\loss_mse.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

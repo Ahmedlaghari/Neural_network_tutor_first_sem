@@ -102,7 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include\;C:\Users\Hp\Downloads;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,21 +124,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\derivativeb.h" />
-    <ClInclude Include="include\derivativew.h" />
-    <ClInclude Include="include\layer_linear.h" />
-    <ClInclude Include="include\layer_tanh.h" />
-    <ClInclude Include="include\linear.h" />
-    <ClInclude Include="include\loss_mse.h" />
+    <ClCompile Include="src\activation.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\neural_net.cpp" />
+    <ClCompile Include="src\train.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\derivativeb.cpp" />
-    <ClCompile Include="src\derivativew.cpp" />
-    <ClCompile Include="src\layer_linear.cpp" />
-    <ClCompile Include="src\layer_tanh.cpp" />
-    <ClCompile Include="src\linear.cpp" />
-    <ClCompile Include="src\loss_mse.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <ClInclude Include="..\..\..\Downloads\json.hpp" />
+    <ClInclude Include="include\activation.h" />
+    <ClInclude Include="include\neural_net.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
